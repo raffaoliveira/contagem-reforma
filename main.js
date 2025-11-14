@@ -1,6 +1,6 @@
-const dataInicial = new Date('2025-11-12T15:20:00')
+const dataInicial = new Date('2025-11-14T09:25:00')
 
-const recorde = null
+const recorde = '1 Dia e 18:10:30 Horas'
 
 function atualizarContador() {
   const agora = new Date()
@@ -14,6 +14,12 @@ function atualizarContador() {
   const horasFormatadas = String(horas).padStart(2, '0')
   const minutosFormatados = String(minutos).padStart(2, '0')
   const segundosFormatados = String(segundos).padStart(2, '0')
+
+  if (dias !== 1) {
+    document.getElementById('stringDays').textContent = 'Dias'
+  } else {
+    document.getElementById('stringDays').textContent = 'Dia'
+  }
 
   document.getElementById('days').textContent = dias
   document.getElementById(
